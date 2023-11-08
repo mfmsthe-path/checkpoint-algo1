@@ -1,0 +1,24 @@
+ALGORITHM Sentence
+VAR
+ phrase:= STRING:= 0; // declare a variable with the name "longeur-phrase" of type "string"
+ nbrecaractere,nbremots,nbrevoyelle:= INTEGER:= 0; // declare 2 variable with the name,"nbremots","nbrevoyelle" of type "integer"
+    
+BEGIN
+
+FOR i FROM 0 TO phrase.length-1 STEP 1  DO
+    IF (phrase[i]= " " or phrase[i]=".") THEN
+        nbremots=nbremots+1;
+    END_IF
+    IF (phrase[i]="o" or  phrase[i]="u" or  phrase[i]="i" or phrase[i]="e" or  phrase[i]="a" ) THEN
+        nbrevoyelle=nbrevoyelle+1;
+    END_IF
+
+END_FOR 
+write(nbremots=nbremots)
+read(nbremots=nbremots)
+write(nbrevoyelle=nbrevoyelle)
+read(nbrevoyelle=nbrevoyelle)
+write(nbrecaractere=nbrecaractere)
+read(nbrecaractere=nbrecaractere)
+
+END
